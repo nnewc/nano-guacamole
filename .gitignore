@@ -1,2 +1,8 @@
 artifacts
 store
+/env.sh
+
+# Terraform
+.terraform
+.terraform.lock.hcl
+*.tfvars

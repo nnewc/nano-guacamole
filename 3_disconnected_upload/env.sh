@@ -1,6 +1,6 @@
 #!/bin/bash
 
-offline_registry=<fqdn of the offline registry>
+offline_registry=harbor.homelab.lan
 platform=linux/amd64
 
 #sync the helm charts

@@ -39,11 +39,9 @@ resource "harvester_virtualmachine" "rke2-server" {
                   eth0:
                     dhcp4: false
                     addresses:
-                      - 10.0.8.20${count.index + 1}/24
-                    gateway4: 10.0.8.1
+                    gateway4: 192.168.80.1
                     nameservers:
-                      search: linuxlabs.local
-                      addresses: 10.0.2.250
+                      addresses: 192.168.1.3
                     dhcp4: true
 		EOF
 	}
@@ -81,13 +79,10 @@ resource "harvester_virtualmachine" "rke2-agent" {
                 version: 2
                 ethernets:
                   eth0:
-                    dhcp4: false
-                    addresses:
-                      - 10.0.8.21${count.index + 1}/24
-                    gateway4: 10.0.8.1
+                    dhcp4: true
+                    gateway4: 192.168.80.1
                     nameservers:
-                      search: linuxlabs.local
-                      addresses: 10.0.2.250
+                      addresses: 192.168.1.3
 		EOF
 	}
 }
